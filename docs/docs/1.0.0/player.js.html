@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>skyblock.js</title>
+    <title>player.js</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -47,7 +47,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">skyblock.js</h1>
+    <h1 class="page-title">player.js</h1>
     
 
     
@@ -58,58 +58,98 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>const axios = require('axios');
-const ENDPOINT_URL = 'https://api.hypixel.net/skyblock';
+const ENDPOINT_URL = 'https://api.hypixel.net';
 
 /**
- * @memberOf Skyblock
- * @param {String} profileId ID of the Skyblock profile.
- * @param {String} key Hypixel API Key
+ * @memberOf Player
+ * @param {String} uuid Player UUID.
+ * @param {String} key Hypixel API Key.
  * @returns {Promise&lt;Object>}
  * @example
- * hypixel.skyblock.getProfile(profileId, key).then(resp => console.log(resp));
- * @description Get the details of a skyblock profile, such as player stats, achievements, and inventories.
+ * hypixel.player.getPlayer(uuid, key).then(resp => console.log(resp));
+ * @description Retrieve information about a Hypixel player, including stats, achievements, etc.
  * @since 1.0.0
  */
-async function getProfile(profileId, key) {
-    const res = await axios.get(`${ENDPOINT_URL}/profile`, {
+async function getPlayer(uuid, key) {
+    const res = await axios.get(`${ENDPOINT_URL}/player`, {
         params: {
-            key: key,
-            profile: profileId
+            uuid: uuid,
+            key: key
         }
     });
     return res.data;
 }
 
 /**
- * @memberOf Skyblock
- * @param {string} uuid Player UUID
- * @param {string} key Hypixel API Key
+ * @memberOf Player
+ * @param {String} uuid Player UUID.
+ * @param {String} key Hypixel API Key.
  * @returns {Promise&lt;Object>}
  * @example
- * hypixel.skyblock.getProfiles(uuid, key).then(resp => console.log(resp));
- * @description Get a list of all the profiles a player has, including associated data found in the getProfile method.
+ * hypixel.player.getFriends(uuid, key).then(resp => console.log(resp));
  * @since 1.0.0
+ * @description Get a player's list of friends.
  */
-async function getProfiles(uuid, key) {
-    const res = await axios.get(`${ENDPOINT_URL}/profiles`, {
+async function getFriends(uuid, key) {
+    const res = await axios.get(`${ENDPOINT_URL}/friends`, {
         params: {
-            key: key,
-            uuid: uuid
+            uuid: uuid,
+            key: key
         }
     });
     return res.data;
 }
 
 /**
- * @namespace Skyblock
- * @description Methods that can retrieve data about Skyblock players and features.
- * @type {{getProfile: (function(*=, *=): any), getProfiles: (function(*=, *=): any)}}
+ * @memberOf Player
+ * @param {String} uuid Player UUID.
+ * @param {String} key Hypixel API Key.
+ * @returns {Promise&lt;Object>}
+ * @example
+ * hypixel.player.getRecentGames(uuid, key).then(resp => console.log(resp));
+ * @since 1.0.0
+ * @description Get the most recent games that a player has participated in.
  */
-const skyblock = {
-    getProfile,
-    getProfiles
+async function getRecentGames(uuid, key) {
+    const res = await axios.get(`${ENDPOINT_URL}/recentGames`, {
+        params: {
+            uuid: uuid,
+            key: key
+        }
+    });
+    return res.data;
 }
-module.exports = skyblock;</code></pre>
+
+/**
+ * @memberOf Player
+ * @param {String} uuid Player UUID.
+ * @param {String} key Hypixel API Key.
+ * @returns {Promise&lt;Object>}
+ * @example
+ * hypixel.player.getRecentGames(uuid, key).then(resp => console.log(resp));
+ * @since 1.0.0
+ * @description Get a player's status, including their current game and whether or not they are online.
+ */
+async function getPlayerStatus(uuid, key) {
+    const res = await axios.get(`${ENDPOINT_URL}/status`, {
+        params: {
+            uuid: uuid,
+            key: key
+        }
+    });
+    return res.data;
+}
+/**
+ * @namespace Player
+ * @type {{getPlayer: (function(*=, *=): any)}}
+ */
+const player = {
+    getPlayer,
+    getFriends,
+    getRecentGames,
+    getPlayerStatus
+}
+module.exports = player;</code></pre>
         </article>
     </section>
 
