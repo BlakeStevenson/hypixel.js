@@ -87,6 +87,7 @@ async function getPlayerStatus(uuid, key) {
 const player = {
     getPlayer,
     getFriends,
-    getRecentGames
+    getRecentGames,
+    getPlayerStatus
 }
 module.exports = player;
