@@ -71,7 +71,7 @@ async function getRecentGames(uuid, key) {
  * @since 1.0.0
  * @description Get a player's status, including their current game and whether or not they are online.
  */
-async function getPlayerStatus(uuid, key) {
+async function getStatus(uuid, key) {
     const res = await axios.get(`${ENDPOINT_URL}/status`, {
         params: {
             uuid: uuid,
@@ -88,6 +88,6 @@ const player = {
     getPlayer,
     getFriends,
     getRecentGames,
-    getPlayerStatus
+    getStatus
 }
 module.exports = player;

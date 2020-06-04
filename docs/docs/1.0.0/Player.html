@@ -42,7 +42,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html"><div class="text">Hypixel.js</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3>Namespaces</h3><ul><li><a href="Player.html">Player</a><ul class='methods'><li data-type='method'><a href="Player.html#.getFriends">getFriends</a></li><li data-type='method'><a href="Player.html#.getPlayer">getPlayer</a></li><li data-type='method'><a href="Player.html#.getPlayerStatus">getPlayerStatus</a></li><li data-type='method'><a href="Player.html#.getRecentGames">getRecentGames</a></li></ul></li><li><a href="Skyblock.html">Skyblock</a><ul class='methods'><li data-type='method'><a href="Skyblock.html#.getProfile">getProfile</a></li><li data-type='method'><a href="Skyblock.html#.getProfiles">getProfiles</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#getUUID">getUUID</a></li></ul></div>
+    <h2><a href="index.html"><div class="text">Hypixel.js</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3>Namespaces</h3><ul><li><a href="Player.html">Player</a><ul class='methods'><li data-type='method'><a href="Player.html#.getFriends">getFriends</a></li><li data-type='method'><a href="Player.html#.getPlayer">getPlayer</a></li><li data-type='method'><a href="Player.html#.getRecentGames">getRecentGames</a></li><li data-type='method'><a href="Player.html#.getStatus">getStatus</a></li></ul></li><li><a href="Skyblock.html">Skyblock</a><ul class='methods'><li data-type='method'><a href="Skyblock.html#.getProfile">getProfile</a></li><li data-type='method'><a href="Skyblock.html#.getProfiles">getProfiles</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#getUUID">getUUID</a></li></ul></div>
 </nav>
 
 <div id="main">
@@ -482,196 +482,6 @@
 
     
 
-    <h4 class="name" id=".getPlayerStatus"><span class="type-signature">(async, static) </span>getPlayerStatus<span class="signature">(uuid, key)</span><span class="type-signature"> &rarr; {Promise.&lt;Object>}</span></h4>
-
-    
-
-
-
-    <div class="description">
-        <p>Get a player's status, including their current game and whether or not they are online.</p>
-    </div>
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Parameters:</strong>
-        
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>uuid</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Player UUID.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>key</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Hypixel API Key.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    </div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-since">Since:</dt>
-            <dd class="tag-since"><ul class="dummy"><li>1.0.0</li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <div class="details-item-container">
-            <dt class="tag-source">Source:</dt>
-            <dd class="tag-source"><ul class="dummy"><li>
-                <a href="player.js.html">player.js</a>, <a href="player.js.html#line74">line 74</a>
-            </li></ul></dd>
-        </div>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="method-member-container mt-20">
-    <strong>Returns:</strong>
-        
-            
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Object></span>
-
-
-    </dd>
-</dl>
- 
-    </div>
-
-
-
-    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
-        <strong>Example</strong>
-        
-    <pre class="prettyprint"><code>hypixel.player.getRecentGames(uuid, key).then(resp => console.log(resp));</code></pre>
-
-    </div>
-
-
-        
-            
-
-    
-
     <h4 class="name" id=".getRecentGames"><span class="type-signature">(async, static) </span>getRecentGames<span class="signature">(uuid, key)</span><span class="type-signature"> &rarr; {Promise.&lt;Object>}</span></h4>
 
     
@@ -858,6 +668,196 @@
 
 
         
+            
+
+    
+
+    <h4 class="name" id=".getStatus"><span class="type-signature">(async, static) </span>getStatus<span class="signature">(uuid, key)</span><span class="type-signature"> &rarr; {Promise.&lt;Object>}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        <p>Get a player's status, including their current game and whether or not they are online.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>uuid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Player UUID.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Hypixel API Key.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-since">Since:</dt>
+            <dd class="tag-since"><ul class="dummy"><li>1.0.0</li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="player.js.html">player.js</a>, <a href="player.js.html#line74">line 74</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;Object></span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Example</strong>
+        
+    <pre class="prettyprint"><code>hypixel.player.getRecentGames(uuid, key).then(resp => console.log(resp));</code></pre>
+
+    </div>
+
+
+        
     
 
     
@@ -881,7 +881,7 @@
 <script>prettyPrint();</script>
 <script src="scripts/linenumber.js"></script>
 <script>
-var list = [{"title":"Player","link":"<a href=\"Player.html\">Player</a>"},{"title":"Player.getFriends","link":"<a href=\"Player.html#.getFriends\">Player.getFriends &rtrif; undefined</a>"},{"title":"Player.getPlayer","link":"<a href=\"Player.html#.getPlayer\">Player.getPlayer &rtrif; undefined</a>"},{"title":"Player.getPlayerStatus","link":"<a href=\"Player.html#.getPlayerStatus\">Player.getPlayerStatus &rtrif; undefined</a>"},{"title":"Player.getRecentGames","link":"<a href=\"Player.html#.getRecentGames\">Player.getRecentGames &rtrif; undefined</a>"},{"title":"Skyblock","link":"<a href=\"Skyblock.html\">Skyblock</a>"},{"title":"Skyblock.getProfile","link":"<a href=\"Skyblock.html#.getProfile\">Skyblock.getProfile &rtrif; undefined</a>"},{"title":"Skyblock.getProfiles","link":"<a href=\"Skyblock.html#.getProfiles\">Skyblock.getProfiles &rtrif; undefined</a>"},{"title":"getUUID","link":"<a href=\"global.html#getUUID\">Global &rtrif; getUUID</a>"}];
+var list = [{"title":"Player","link":"<a href=\"Player.html\">Player</a>"},{"title":"Player.getFriends","link":"<a href=\"Player.html#.getFriends\">Player.getFriends &rtrif; undefined</a>"},{"title":"Player.getPlayer","link":"<a href=\"Player.html#.getPlayer\">Player.getPlayer &rtrif; undefined</a>"},{"title":"Player.getRecentGames","link":"<a href=\"Player.html#.getRecentGames\">Player.getRecentGames &rtrif; undefined</a>"},{"title":"Player.getStatus","link":"<a href=\"Player.html#.getStatus\">Player.getStatus &rtrif; undefined</a>"},{"title":"Skyblock","link":"<a href=\"Skyblock.html\">Skyblock</a>"},{"title":"Skyblock.getProfile","link":"<a href=\"Skyblock.html#.getProfile\">Skyblock.getProfile &rtrif; undefined</a>"},{"title":"Skyblock.getProfiles","link":"<a href=\"Skyblock.html#.getProfiles\">Skyblock.getProfiles &rtrif; undefined</a>"},{"title":"getUUID","link":"<a href=\"global.html#getUUID\">Global &rtrif; getUUID</a>"}];
 setupSearch(list)
 </script>
 
