@@ -1,0 +1,35 @@
+{
+  "name": "hypixel.js",
+  "version": "1.0.0",
+  "description": "API client for the Hypixel Network API, written in JavaScript and compatible with both Node.js and in browsers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlakeStevenson/hypixel.js.git"
+  },
+  "keywords": [
+    "hypixel",
+    "minecraft",
+    "api"
+  ],
+  "author": "Blake Stevenson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlakeStevenson/hypixel.js/issues"
+  },
+  "homepage": "https://github.com/BlakeStevenson/hypixel.js#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "isomorphic-fetch": "^2.2.1",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "clean-jsdoc-theme": "^2.2.11",
+    "jsdoc": "^3.6.4",
+    "minami": "^1.2.3"
+  }
+}
