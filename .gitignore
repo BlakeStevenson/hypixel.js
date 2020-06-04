@@ -1,3 +1,7 @@
 node_modules/
 tests.js
+<<<<<<< HEAD
+=======
+docs/
+>>>>>>> 410a957548a9fbb34a973ed15628ecbeebfaf111
 .jsdoc.json
