@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/BlakeStevenson/hypixel.js#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "isomorphic-fetch": "^2.2.1",
     "webpack": "^4.43.0"
   },
